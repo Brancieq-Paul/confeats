@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "confeats",
+  "version": "${version}",
+  "name": "Confeats",
+  "description": "desc",
+  "authors": [
+    "Paul Brancieq"
+  ],
+  "contact": {
+    "website": "https://github.com/Brancieq-Paul/confeats",
+    "repo": "https://github.com/Brancieq-Paul/confeats"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/confeats/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "fr.paulbrancieq.confeats.confeats.client.ConfeatsClient"
+    ],
+    "main": [
+      "fr.paulbrancieq.confeats.confeats.Confeats"
+    ],
+    "server": [
+      "fr.paulbrancieq.confeats.confeats.server.ConfeatsServer"
+    ]
+  },
+  "mixins": [
+    "confeats.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}",
+    "accessoptions": "*"
+  }
+}
