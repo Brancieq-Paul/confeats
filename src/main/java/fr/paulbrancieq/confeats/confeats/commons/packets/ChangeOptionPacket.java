@@ -12,13 +12,15 @@ import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 
+import fr.paulbrancieq.confeats.confeats.Constants;
+
 public class ChangeOptionPacket extends Packet {
   public String modId;
   public String optionId;
   public String value;
 
   public ChangeOptionPacket(String modId, String optionId, String value) {
-    super("changeOption");
+    super(Constants.PACKET_SET_OPTION_ID);
     this.modId = modId;
     this.optionId = optionId;
     this.value = value;
