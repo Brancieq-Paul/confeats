@@ -35,6 +35,7 @@ public abstract class Packet {
   public abstract void handleClient(MinecraftClient client, ClientPlayNetworkHandler handler, PacketByteBuf buf, PacketSender responseSender);
   public abstract void handleServer(MinecraftServer server, ServerPlayerEntity player, ServerPlayNetworkHandler handler, PacketByteBuf buf, PacketSender responseSender);
 
+  @SuppressWarnings("unused")
   @Environment(EnvType.CLIENT)
   public void sendToServer() {
     ClientPlayNetworking.send(this.packetId, this.buf);

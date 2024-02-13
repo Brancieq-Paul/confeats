@@ -40,12 +40,9 @@ public class ConfeatsServer implements DedicatedServerModInitializer {
                               }
                               try {
                                 new ChangeOptionPacket(modId, optionId, value).sendToPlayer(playerEntity);
-                                context.getSource().sendFeedback(new Supplier<Text>() {
-                                  @Override
-                                  public Text get() {
-                                    return Text.of("Sent option modification request to player " + player);
-                                  }
-                                }, false);
+                                context.getSource().sendFeedback(() ->
+                                    Text.of("Sent option modification request to player " + player),
+                                    false);
                               } catch (Exception e) {
                                 context.getSource().sendError(Text.of("Unknown error. Please report this to the mod author."));
                                 Confeats.getLogger().error("Unknown error while trying to modify option", e);
