@@ -1,7 +1,7 @@
-package fr.paulbrancieq.confeats.confeats.commons.packets;
+package fr.paulbrancieq.confeats.packets;
 
 import fr.paulbrancieq.accessoptions.commons.exeptions.AccessOptionsException;
-import fr.paulbrancieq.confeats.confeats.Confeats;
+import fr.paulbrancieq.confeats.Confeats;
 import fr.paulbrancieq.accessoptions.OptionsAccessHandler;
 import net.fabricmc.fabric.api.networking.v1.PacketSender;
 import net.minecraft.client.MinecraftClient;
@@ -12,7 +12,7 @@ import net.minecraft.server.network.ServerPlayNetworkHandler;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
 
-import fr.paulbrancieq.confeats.confeats.Constants;
+import fr.paulbrancieq.confeats.Constants;
 
 public class ChangeOptionPacket extends Packet {
   public String modId;

@@ -1,4 +1,4 @@
-package fr.paulbrancieq.confeats.confeats.commons.packets;
+package fr.paulbrancieq.confeats.packets;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

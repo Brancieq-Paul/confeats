@@ -1,16 +1,14 @@
-package fr.paulbrancieq.confeats.confeats.server;
+package fr.paulbrancieq.confeats.server;
 
 import com.mojang.brigadier.arguments.StringArgumentType;
-import fr.paulbrancieq.confeats.confeats.Confeats;
-import fr.paulbrancieq.confeats.confeats.commons.packets.ChangeOptionPacket;
+import fr.paulbrancieq.confeats.Confeats;
+import fr.paulbrancieq.confeats.packets.ChangeOptionPacket;
 import net.fabricmc.api.DedicatedServerModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.command.CommandManager;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
-
-import java.util.function.Supplier;
 
 public class ConfeatsServer implements DedicatedServerModInitializer {
   @Override

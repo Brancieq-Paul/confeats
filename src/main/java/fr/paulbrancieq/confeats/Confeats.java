@@ -1,4 +1,4 @@
-package fr.paulbrancieq.confeats.confeats;
+package fr.paulbrancieq.confeats;
 
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;

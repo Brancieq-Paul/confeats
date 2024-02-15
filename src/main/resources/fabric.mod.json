@@ -16,13 +16,16 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "fr.paulbrancieq.confeats.confeats.client.ConfeatsClient"
+      "fr.paulbrancieq.confeats.client.ConfeatsClient"
     ],
     "main": [
-      "fr.paulbrancieq.confeats.confeats.Confeats"
+      "fr.paulbrancieq.confeats.Confeats"
     ],
     "server": [
-      "fr.paulbrancieq.confeats.confeats.server.ConfeatsServer"
+      "fr.paulbrancieq.confeats.server.ConfeatsServer"
+    ],
+    "modmenu": [
+      "fr.paulbrancieq.confeats.ConfeatsModMenuApiImpl"
     ]
   },
   "mixins": [

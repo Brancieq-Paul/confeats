@@ -1,8 +1,8 @@
-package fr.paulbrancieq.confeats.confeats.client;
+package fr.paulbrancieq.confeats.client;
 
 import fr.paulbrancieq.accessoptions.commons.exeptions.AccessOptionsException;
-import fr.paulbrancieq.confeats.confeats.Confeats;
-import fr.paulbrancieq.confeats.confeats.commons.packets.ChangeOptionPacket;
+import fr.paulbrancieq.confeats.Confeats;
+import fr.paulbrancieq.confeats.packets.ChangeOptionPacket;
 import fr.paulbrancieq.accessoptions.OptionsAccessHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.client.command.v2.ClientCommandManager;
