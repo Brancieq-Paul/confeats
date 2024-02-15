@@ -1,6 +1,5 @@
 package fr.paulbrancieq.confeats.client.exceptions;
 
-import fr.paulbrancieq.confeats.client.gui.YACLOptionBuilder;
 import fr.paulbrancieq.confeats.client.gui.gson.GsonOption;
 
 public class YACLOptionBuilderException extends ConfeatsException {
@@ -12,7 +11,6 @@ public class YACLOptionBuilderException extends ConfeatsException {
     private CannotValidateGsonOption(String message) {
       super(message);
     }
-
     public static class MissingOptionId extends CannotValidateGsonOption {
       public MissingOptionId(GsonOption gsonOption) {
         super("Option id is missing for option");

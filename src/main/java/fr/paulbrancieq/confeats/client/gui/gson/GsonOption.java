@@ -4,12 +4,15 @@ import fr.paulbrancieq.accessoptions.OptionsAccessHandler;
 import fr.paulbrancieq.accessoptions.commons.options.Option;
 import fr.paulbrancieq.accessoptions.commons.storage.OptionsStorage;
 import fr.paulbrancieq.confeats.Confeats;
+import fr.paulbrancieq.confeats.client.exceptions.YACLOptionBuilderException;
 
 public class GsonOption {
   @SuppressWarnings("unused")
   private String storage;
   @SuppressWarnings("unused")
   private String id;
+  @SuppressWarnings("unused")
+  @JsonOptional
   private String inGuiId;
   public Option<?, ?> getOption(OptionsAccessHandler optionsAccessHandler) {
     OptionsStorage<?> storage = optionsAccessHandler.getOptionsStorage(this.storage);
@@ -23,7 +26,6 @@ public class GsonOption {
     }
     return option;
   }
-
   public String getStorage() {
     return storage;
   }
@@ -31,7 +33,8 @@ public class GsonOption {
   public String getId() {
     return id;
   }
+  @SuppressWarnings("unused")
   public String getInGuiId() {
-    return inGuiId;
+    return inGuiId != null ? inGuiId : "%s-" + storage + "-" + id + "-%s";
   }
 }

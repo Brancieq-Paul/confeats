@@ -4,6 +4,9 @@ import java.util.Collection;
 
 public class GsonConfigCategory {
     @SuppressWarnings("unused")
+    @JsonOptional
+    private String inGuiId;
+    @SuppressWarnings("unused")
     private String name;
     @SuppressWarnings("unused")
     private String description;
@@ -17,5 +20,8 @@ public class GsonConfigCategory {
     }
     public Collection<GsonOptionGroup> getGroups() {
         return groups;
+    }
+    public String getInGuiId() {
+        return inGuiId != null ? inGuiId : name.toLowerCase().replace(' ', '_');
     }
 }

@@ -1,6 +1,7 @@
 package fr.paulbrancieq.confeats.client.gui;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import dev.isxander.yacl3.api.OptionDescription;
 import dev.isxander.yacl3.api.OptionGroup;
 import dev.isxander.yacl3.api.controller.*;
@@ -23,12 +24,15 @@ import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Objects;
 
+import fr.paulbrancieq.confeats.client.gui.gson.AnnotatedTypeAdapterFactory;
+
 public class OptionsScreenBuilder {
   private final OptionsAccessHandler optionsAccessHandler;
   private final GsonYACLScreen gsonYACLScreen;
   public OptionsScreenBuilder(String jsonFilePath) throws FileNotFoundException {
     optionsAccessHandler = new OptionsAccessHandler();
-    gsonYACLScreen = new Gson().fromJson(new FileReader(jsonFilePath), GsonYACLScreen.class);
+    Gson gson = new GsonBuilder().registerTypeAdapterFactory(new AnnotatedTypeAdapterFactory()).create();
+    gsonYACLScreen = gson.fromJson(new FileReader(jsonFilePath), GsonYACLScreen.class);
   }
   public Screen generateScreen(Screen parent) {
     List<dev.isxander.yacl3.api.ConfigCategory> list = new java.util.ArrayList<>(gsonYACLScreen.getCategories().stream().map(this::createGUIOptionCategory).toList());

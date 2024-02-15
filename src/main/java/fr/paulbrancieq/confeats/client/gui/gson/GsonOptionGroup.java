@@ -9,6 +9,9 @@ public class GsonOptionGroup {
     private String description;
     @SuppressWarnings("unused")
     private Collection<GsonOption> options;
+    @JsonOptional
+    @SuppressWarnings("unused")
+    private String inGuiId;
     public String getName() {
         return name;
     }
@@ -17,5 +20,8 @@ public class GsonOptionGroup {
     }
     public Collection<GsonOption> getOptions() {
         return options;
+    }
+    public String getInGuiId() {
+        return inGuiId != null ? inGuiId : "%s-" + name.toLowerCase().replace(' ', '_');
     }
 }
