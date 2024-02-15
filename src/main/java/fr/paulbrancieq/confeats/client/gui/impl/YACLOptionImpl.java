@@ -248,7 +248,7 @@ public class YACLOptionImpl<T> implements YACLOption<T> {
       Validate.notNull(controlGetter, "`control` must not be null when building `Option`");
       Validate.notNull(binding, "`binding` must not be null when building `Option`");
 
-      return new YACLOptionImpl<T>(name, descriptionFunction, controlGetter, binding, available, instant);
+      return new YACLOptionImpl<>(name, descriptionFunction, controlGetter, binding, available, instant);
     }
   }
 }

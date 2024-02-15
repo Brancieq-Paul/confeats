@@ -104,7 +104,7 @@ public interface YetAnotherConfigLib {
      *
      * @see YetAnotherConfigLib#optionsAccessHandler()
      */
-    public Builder optionsAccessHandler(@NotNull OptionsAccessHandler optionsAccessHandler);
+    Builder optionsAccessHandler(@NotNull OptionsAccessHandler optionsAccessHandler);
 
     /**
      * Defines a consumer that is accepted every time the YACL screen initialises

@@ -4,7 +4,6 @@ import fr.paulbrancieq.accessoptions.OptionsAccessHandler;
 import fr.paulbrancieq.accessoptions.commons.options.Option;
 import fr.paulbrancieq.accessoptions.commons.storage.OptionsStorage;
 import fr.paulbrancieq.confeats.Confeats;
-import fr.paulbrancieq.confeats.client.exceptions.YACLOptionBuilderException;
 
 public class GsonOption {
   @SuppressWarnings("unused")

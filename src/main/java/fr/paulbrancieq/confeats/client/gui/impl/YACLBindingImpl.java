@@ -20,9 +20,7 @@ public class YACLBindingImpl<S, T> implements YACLBinding<T> {
     this.def = def;
     this.getter = option::getPendingValue;
     this.originalValueGetter = option::getOriginalValue;
-    this.setter = (newValue) -> {
-      this.optionsAccessHandler.modifyOption(option, newValue);
-    };
+    this.setter = (newValue) -> this.optionsAccessHandler.modifyOption(option, newValue);
   }
 
   @Override

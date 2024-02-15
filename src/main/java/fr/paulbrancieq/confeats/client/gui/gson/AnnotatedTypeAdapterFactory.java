@@ -37,7 +37,7 @@ public class AnnotatedTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     final TypeAdapter<T> baseAdapter = (TypeAdapter<T>) gson.getAdapter(rawType);
 
-    return new TypeAdapter<T>() {
+    return new TypeAdapter<>() {
 
       @Override
       public void write(JsonWriter jsonWriter, T o) throws IOException {
@@ -45,7 +45,7 @@ public class AnnotatedTypeAdapterFactory implements TypeAdapterFactory {
       }
 
       @Override
-      public T read(JsonReader in) throws IOException {
+      public T read(JsonReader in) {
         JsonElement jsonElement = Streams.parse(in);
 
         if (jsonElement.isJsonObject()) {
